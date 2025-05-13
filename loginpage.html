@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginpage</title>
+    <link rel="stylesheet" href="styleslogin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body>
+        <img src="piggy logo svg.svg" alt="" width="60" height="60">
+        <div class="squarewindow"> 
+        <h1 class="h3 mb-3 fw-normal" id="title">Log In</h1> 
+        <form id="login-form">
+        <div class="form-floating"> 
+            <input type="text" class="form-control" id="username" > 
+            <label for="username">Username</label> 
+        </div> 
+        <div class="form-floating"> 
+            <input type="password" class="form-control" id="password" > 
+            <label for="password">Password</label> 
+        </div> 
+        <button class="btn signup-btn" type="button" onclick="toggleForm()">Create Account</button>
+        <button class="btn custom-btn w-100 py-2" type="submit">Login</button>
+     </form>
+    </div> 
+   
+
+    <script src="loginpage.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+body{
+    background-color: #fff7e6!important;
+    font-family: Arial, sans-serif!important;
+}
+
+.navbar{
+    background-color: #a8d9d3!important;
+} 
+
+#spendingChart {
+display: flex;
+justify-content: center;
+  max-width: 400px;
+  margin: 60px auto;
+  width: 100%;
+  height: auto;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 36px;
+}

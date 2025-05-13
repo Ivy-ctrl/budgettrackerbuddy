@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <!-- My modified bootrap header -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+        <img src="piggy logo svg.svg" alt="" width="40" height="40">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link text-dark fs-5 active" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-dark fs-5" href="stats.html">Statistics</a>
+              <a class="nav-link text-dark fs-5" href="loginpage.html">Log out</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+  <div class="month-selector">
+    <button id="prevMonthBtn">←</button>
+    <span id="currentMonthLabel">Month</span>
+    <button id="nextMonthBtn">→</button>
+ </div>
+ 
+ <label for="category-select" style="font-weight: bold; margin-left: 15px;" >Viewing:</label>
+  <select id="category-select">
+    <option value="All">All</option>
+    <option value="food">Food</option>
+    <option value="home">Home</option>
+    <option value="lifestyle">Lifestyle</option>
+    <option value="transport">Transport</option>
+    <option value="fun">Fun</option>
+    <option value="extra">Extra</option>
+  </select>
+  <div class="middle">
+    <div class="list-area"> </div>
+
+    <div class="stats">
+        <div class="stat-item" id="spent-item">Spent: 0</div>
+        <div class="stat-item" id="left-item">Left: 0</div>
+        <div class="stat-item" id="income-item">
+          <label for="income-input">Income:</label>
+          <input type="number" id="income-input" value="0" />
+        </div>
+    </div>  
+  </div>
+   
+  <button id="add-button">+</button> 
+  
+  <!-- Modal (like pop up window so I can keep my background) -->
+
+  <div class="modal" id="modal"> <!-- add open to modal if i want to edit the popup without it closing -->
+    <div class="modal-iner">
+      <button id="close-button">&times;</button>
+      <label>Price:<input type="number" id="price" /></label>
+      <label>Name:<input type="text" id="name" /></label>
+
+      <!-- Radio type means I can choose only one of the many -->
+      <div class="buttoncategories">
+        <input type="radio" id="food" name="category" value="food" hidden>
+        <label for="food" class="category-button" style="background-color: #f98282; font-weight: bold;">Food</label>
+
+        <input type="radio" id="home" name="category" value="home" hidden>
+        <label for="home" class="category-button" style="background-color: #f7e188; font-weight: bold;">Home</label>
+
+        <input type="radio" id="lifestyle" name="category" value="lifestyle" hidden>
+        <label for="lifestyle" class="category-button" style="background-color: #ffc0cb; font-weight: bold;" >Lifestyle</label>
+      
+        <input type="radio" id="transport" name="category" value="transport" hidden>
+        <label for="transport" class="category-button" style="background-color: #a3d585; font-weight: bold;" >Transport</label>
+      
+        <input type="radio" id="fun" name="category" value="fun" hidden>
+        <label for="fun" class="category-button" style="background-color: #f0afed; font-weight: bold;" >Fun</label>
+
+        <input type="radio" id="extra" name="category" value="extra" hidden>
+        <label for="extra" class="category-button" style="background-color: #f0bb6b; font-weight: bold;" >Extra</label>
+
+      </div>
+      <button id="save-button">Save</button>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="home.js"></script>
+  </body>
+
+</html>
